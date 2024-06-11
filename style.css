@@ -1,0 +1,357 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #FAE8E0;
+    
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    padding: 10px 20px;
+    color: #fff;
+    position: fixed;
+   width: 98%;
+   top: 0;
+   z-index: 1000;  
+  }
+  
+  .navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  .navbar .nav-links {
+    list-style: none;
+    display: flex;
+    
+  }
+  
+  .navbar .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s;
+  }
+  
+  .navbar .nav-links a:hover {
+    color: #ddd;
+  }
+  
+  .nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .hamburger, .hamburger::before, .hamburger::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+  }
+  
+  .hamburger::before, .hamburger::after {
+    transition: transform 0.3s ease;
+  }
+  
+  .hamburger::before {
+    transform: translateY(-8px);
+  }
+  
+  .hamburger::after {
+    transform: translateY(8px);
+  }
+  @media (max-width: 768px) {
+    .nav-toggle {
+      display: flex;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+    }
+  }
+  
+
+  header {
+    position: relative; 
+    
+  }
+  .header-content {
+    position: relative; 
+    z-index: 1; 
+    opacity: 0; 
+   transition: opacity 1s ease-in-out; 
+   animation: colorChange 3s infinite alternate;
+  }
+  @keyframes colorChange {
+    0% { color: rgb(8, 7, 7); } /* Start with red color */
+    50% { color: rgb(29, 29, 37); } /* Transition to blue color */
+    100% { color: rgb(221, 213, 220); } /* Transition to green color */
+  }
+  .header-content.show {
+    opacity: 1; 
+  }
+  
+  
+  .video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  #video-background {
+    width: 100%;
+    height: auto;
+    object-fit: cover; }
+  
+  header {
+    background-color: #333;
+    color: #171616;
+    text-align:center;
+    padding: 250px 0;
+    
+  }
+  h1{
+    font-size: 80px;
+  }
+  h3{
+    font-size: 40px;
+  }
+  
+  header p {
+    font-size: 20px; 
+    font-weight: bold; 
+    color: rgb(0, 0, 0); 
+  }
+  main {
+    padding: 20px;
+  }
+  
+  .destination {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .destination h2 {
+    margin-bottom: 20px;
+    font-size: 50px;
+  }
+  
+  .destination-card {
+    display: inline-block;
+    width: 250px;
+    margin: 0 20px;
+    text-align: left;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+  }
+  
+  .destination-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .destination-card img {
+    width: 100%;
+    height: 200px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .destination-card h3 {
+    margin: 10px 0;
+  }
+  
+  .destination-card p {
+    margin-bottom: 20px;
+  }
+  
+  .newsletter {
+    text-align: center;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .blog {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .blog h2 {
+    margin-bottom: 20px;
+  }
+  
+  .blog-posts {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .blog-post {
+    width: 300px;
+    margin: 0 20px 20px;
+    text-align: left;
+  }
+  
+  .blog-post img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .blog-post-info {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .blog-post-info h3 {
+    margin-top: 0;
+  }
+  
+  .blog-post-info p {
+    margin-bottom: 20px;
+  }
+  
+  .blog-post-info a {
+    display: inline-block;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .blog-post-info a:hover {
+    text-decoration: underline;
+  }
+  .experiences {
+    text-align:center ;
+    margin-bottom: 50px;
+    justify-content:space-around ;
+  }
+  
+  .experiences h2 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  
+  .experience {
+    display: inline-block;
+    width: 300px;
+    margin: 0 20px;
+    text-align: left;
+  }
+  
+  .experience img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+  }
+  
+  .experience-info {
+    padding: 20px;
+    background-color: #FFC2C7;
+    border-radius: 8px;
+    
+  }
+  
+  .experience-info h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+  
+  .experience-info p {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    
+  }
+  
+  .experience-info a {
+    display: inline-block;
+    color: #030303;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+  
+  .experience-info a:hover {
+    text-decoration: underline;
+  }
+  .contact {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .contact h2 {
+    margin-bottom: 20px;
+  }
+  
+  #contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+
+ 
